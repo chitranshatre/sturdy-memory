@@ -16,7 +16,7 @@ function linkify(line) {
     return line
         .replace(/([^\s/]+[/][^\s/]+)?#(\d+)/g, (_, repo, num) => `[${repo || ""}#${num}](https://github.com/${repo || "eslint/eslint"}/issues/${num})`)
         .replace(RULE_REGEX, "[$&](/docs/rules/$1)");
-}
+                       }
 
 function outputList(items) {
     items.forEach(function(line) {%>
